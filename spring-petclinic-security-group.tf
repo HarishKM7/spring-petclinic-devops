@@ -7,7 +7,7 @@ module "spring_petclinic_security_group" {
 
   vpc_id              = module.vpc.vpc_id
   ingress_cidr_blocks = ["${module.jenkins_server.private_ip[0]}/32"]
-  ingress_rules       = ["ssh-tcp"]
+  ingress_rules       = ["ssh-tcp", "http-8080-tcp"]
   egress_rules        = ["all-all"]
 
   tags = {
