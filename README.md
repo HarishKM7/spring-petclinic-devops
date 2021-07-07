@@ -18,7 +18,7 @@ Terraform scripts to create AWS infra for hosting &amp; CI/CD of spring-petclini
 
 ## Steps to Use this Solution
 
-- Clone this repo.
+- Clone this repo & change the AWS profile name in `main.tf`.
 - Run `terraform init && terraform apply` & note the Terraform outputs.
 - Run `ssh -i spring-petclinic.pem ubuntu@JENKINS_IP -c 'sudo cat /var/lib/jenkins/secrets/initialAdminPassword'` to get Jenkins password.
 - Open `JENKINS_URL` in browser & enter password.
