@@ -20,8 +20,8 @@ Terraform scripts to create AWS infra for hosting &amp; CI/CD of spring-petclini
 
 - Clone this repo & change the AWS profile name in `main.tf`.
 - Run `terraform init && terraform apply` & note the Terraform outputs.
-- Run `ssh -i spring-petclinic.pem ubuntu@JENKINS_IP 'sudo cat /var/lib/jenkins/secrets/initialAdminPassword'` to get Jenkins password.
-  - Note: If you are warned about "unknown host", you might get the error `cat: /var/lib/jenkins/secrets/initialAdminPassword: No such file or directory` even after you answer `yes` to the prompt. If this happens, rerun the command & you should see the password if you're not warned about "unknown host" this time.
+- SSH into Jenkins server: `ssh -i spring-petclinic.pem ubuntu@JENKINS_IP`
+- Run `sudo cat /var/lib/jenkins/secrets/initialAdminPassword` to get Jenkins password.
 - Open `JENKINS_URL` in browser & enter password.
 - Configure Jenkins & create a pipeline to deploy Spring PetClinic.
 - Once Spring PetClinic is deployed on the private server, if you wish to open its web app in your local browser, follow these steps:
