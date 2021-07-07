@@ -24,4 +24,4 @@ apt install -y jenkins
 usermod -aG docker jenkins
 
 systemctl enable jenkins
-systemctl start jenkins
+systemctl restart jenkins
